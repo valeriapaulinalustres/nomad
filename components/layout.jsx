@@ -2,15 +2,13 @@ import Head from "next/head";
 import styles from '../styles/Layout.module.css'
 import Link from 'next/link'
 import getNav from '../pages/api/getNav'
+import { useState } from "react";
 
 
 
 
 
 export default function Layout({children, headTitle, headDescription}) {
-
-    const result = [{navName: "alojate", src:"alojate"}, {navName:"Experimente", src:"experimenta"}]
-
 
 
   return (
@@ -20,21 +18,10 @@ export default function Layout({children, headTitle, headDescription}) {
     <meta name="description" content={headDescription} />
     <link rel="icon" href="/favicon.ico" />
 </Head>
-<nav>
 
-{result.map((element, index) => {
-                    return (
-                        <Link
-                            href={element.src}
-                            className={styles.navbar}
-                            key={index}
-                            >{element.navName}
-                        </Link>)
-                })}
 
-</nav>
 <main>{children}</main>
-<footer>acá ira el footer</footer>
+
     </div>
   )
 }
@@ -44,6 +31,3 @@ Layout.defaultProps ={
     description: "Working around the world"
 }
 
-
-
-                
