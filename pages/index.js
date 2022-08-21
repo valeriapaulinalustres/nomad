@@ -8,10 +8,12 @@ export default function Home(props) {
 
 
 //---------send navbar to context-------------
-const { setNavbarItems } = useContext(navbarContext);
+const { setNavbarItems, setFooterItems } = useContext(navbarContext);
+
 
 useEffect(() => {
   setNavbarItems(props.nav)
+  setFooterItems(props.footer)
 }, [])
 
 //-------------------------------------------
@@ -23,12 +25,19 @@ useEffect(() => {
   )
 }
 
-//----------SSR navbar-----------------------------------------
+//----------SSR-----------------------------------------
+
 export async function getServerSideProps(context) {
+
+  //SSR navbar
   let data = await fetch  ('http://localhost:3000/api/nav')
   let nav = await data.json()
+//SSR footer
+  let dataFooter = await fetch  ('http://localhost:3000/api/footer')
+  let footer = await dataFooter.json()
+
   return {
-    props: {nav}, // will be passed to the page component as props
+    props: {nav, footer}, // will be passed to the page component as props
   }
 }
 //--------------------------------------------------------------

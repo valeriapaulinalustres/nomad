@@ -1,7 +1,6 @@
 import Head from "next/head";
 import styles from '../styles/Layout.module.css'
 import Link from 'next/link'
-import getNav from '../pages/api/getNav'
 import { useState } from "react";
 
 

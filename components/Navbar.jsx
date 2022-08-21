@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import getNav from '../pages/api/getNav'
 import { useState, useContext } from "react";
 import styles from '../styles/Layout.module.css'
 import navbarContext from '../context/navbarContext';

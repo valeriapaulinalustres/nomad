@@ -1,3 +1,4 @@
+/*
 import {nav} from "./nav"
 
 export default async function getNav () {
@@ -6,3 +7,4 @@ export default async function getNav () {
   res.json(result)
  console.log(result)
 }
+*/
