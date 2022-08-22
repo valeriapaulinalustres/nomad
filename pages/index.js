@@ -7,20 +7,29 @@ import navbarContext from '../context/navbarContext';
 export default function Home(props) {
 
 
-//---------send navbar to context-------------
-const { setNavbarItems, setFooterItems } = useContext(navbarContext);
+//---------send navbar, footer and home to context and brings homeItems-------------
+const { setNavbarItems, setFooterItems, homeItems, setHomeItems } = useContext(navbarContext);
 
 
 useEffect(() => {
   setNavbarItems(props.nav)
   setFooterItems(props.footer)
+  setHomeItems(props.home)
 }, [])
 
 //-------------------------------------------
 
   return (
    <Layout title="Nomad" description="Working around the world" >
-    <div>Home</div>
+    <div>
+      <section>
+        <h1>{homeItems.title}</h1>
+      </section>
+      <section>
+        <p>{homeItems.text1}<br/>{homeItems.text2}<span>{homeItems.text3}</span><br/>{homeItems.text4}</p>
+      </section>
+      <section></section>
+    </div>
    </Layout>
   )
 }
@@ -36,8 +45,12 @@ export async function getServerSideProps(context) {
   let dataFooter = await fetch  ('http://localhost:3000/api/footer')
   let footer = await dataFooter.json()
 
+  //SSR footer
+  let dataHome = await fetch  ('http://localhost:3000/api/home')
+  let home = await dataHome.json()
+
   return {
-    props: {nav, footer}, // will be passed to the page component as props
+    props: {nav, footer, home}, // will be passed to the page component as props
   }
 }
 //--------------------------------------------------------------

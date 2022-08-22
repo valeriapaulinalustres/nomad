@@ -5,28 +5,33 @@ import navbarContext from '../context/navbarContext';
 
 export default function Navbar(props) {
 
-//-------------recibes navbar from contexts------------------------
-const { navbarItems } = useContext(navbarContext);
-//console.log(navbarItems)
-//----------------------------------------------------------------
+  //-------------recibes navbar from contexts------------------------
+  const { navbarItems } = useContext(navbarContext);
+  //console.log(navbarItems)
+  //----------------------------------------------------------------
 
-//const result = [{navName: "alojate", src:"alojate"}, {navName:"Experimente", src:"experimenta"}]
+  //const result = [{navName: "alojate", src:"alojate"}, {navName:"Experimente", src:"experimenta"}]
 
 
   return (
-    <nav>
+    <div>
+      <img></img>
+      <nav>
 
-{navbarItems.map((element, index) => {
-                    return (
-                        <Link
-                            href={element.src}
-                            className={styles.navbar}
-                            key={index}
-                            >{element.navName}
-                        </Link>)
-                })}
-                
+        {navbarItems.map((element, index) => {
+          return (
+            <Link
+              href={element.src}
+              className={styles.navbar}
+              key={index}
+            >{element.navName}
+            </Link>)
+        })}
 
-</nav>
+        <p></p>
+        <button></button>
+      </nav>
+    </div>
+
   )
 }

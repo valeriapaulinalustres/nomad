@@ -6,11 +6,12 @@ const NavbarProvider = ({ children }) => {
 
   const [navbarItems, setNavbarItems] = useState([])
   const [footerItems, setFooterItems] = useState([])
+  const [homeItems, setHomeItems] = useState([])
 //console.log(navbarItems)
 
 
 //-----exports------
-  const data = { navbarItems, setNavbarItems, footerItems, setFooterItems }
+  const data = { navbarItems, setNavbarItems, footerItems, setFooterItems, homeItems, setHomeItems }
 
   return (
     <navbarContext.Provider value={data}>
