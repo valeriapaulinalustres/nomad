@@ -1,9 +1,9 @@
 
 export default function nav(req, res) { 
   res.json([
-      {id: 1, navName: "Alojate", src: "alojate"}, 
-      {id: 2, navName: "Co-Work", src: "cowork"}, 
-      {id: 3, navName: "Experimenta", src:"experimenta"}, 
-      {id: 4, navName: "Únete", src:"unete"}])
+      {id: 1, navName: "Alojate", src: "alojate", type:"link"}, 
+      {id: 2, navName: "Co-Work", src: "cowork", type:"link"}, 
+      {id: 3, navName: "Experimenta", src:"experimenta", type:"click"}, 
+      {id: 4, navName: "Únete", src:"unete", type:"link"}])
   }
   

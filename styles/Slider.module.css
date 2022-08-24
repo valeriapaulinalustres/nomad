@@ -1,0 +1,106 @@
+.navbarContainer{
+    color: red;
+}
+
+.sliderContainer{
+    margin: 0 auto;
+    overflow-x: hidden;
+   
+  
+}
+
+.slider{
+    display: flex;
+    cursor: grab;
+}
+
+.sliderImgContainer{
+height: 27rem;
+min-width: 40rem;
+padding: 2rem;
+position: relative;
+}
+
+.sliderImg{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    border-radius: 20px;
+   
+}
+
+
+
+.logo0{
+    background-color: blue;
+    position: absolute;
+    right: -4px;
+    bottom: 70px;
+    z-index: +5;
+overflow-y: hidden;
+height: 100px;
+    border-radius: 15px;
+    padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   color: white;
+ 
+}
+.logo1{
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+backdrop-filter: blur(3.5px);
+position: absolute;
+right: -4px;
+bottom: 70px;
+z-index: +5;
+width: 300px;
+border-radius: 15px;
+padding: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}
+.logo2{
+    background-color: fuchsia;
+    position: absolute;
+    right: -4px;
+    bottom: 70px;
+    z-index: +5;
+height: 100px;
+    border-radius: 15px;
+    padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start; 
+   color: white;
+}
+
+.iconTitle{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.text{
+    border-bottom: 1px solid greenyellow;
+    padding: 15px 0px;
+}
+
+.services{
+    padding: 15px 0px;
+}
+
+.servicesIcons{
+    color: white;
+    padding: 30px 5px 5px 0px;
+}
+
+.mapsIcon{
+    color: white;
+}
+

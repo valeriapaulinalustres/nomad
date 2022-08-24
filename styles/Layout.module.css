@@ -1,3 +1,8 @@
 .navbarContainer{
-    color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbarLink{
+    margin: 10px;
 }

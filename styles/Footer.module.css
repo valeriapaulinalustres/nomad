@@ -1,0 +1,36 @@
+.icons{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.greeting{
+    background-color: blue;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.greetingText{
+    font-weight: lighter;
+   
+}
+
+.footerFirstSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerTextSeo{
+    width: 280px;
+    font-size: 12px;
+}
+
+.footerNavlinks{
+    display: flex;
+    flex-direction: column;
+
+}

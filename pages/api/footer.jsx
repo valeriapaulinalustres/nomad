@@ -1,7 +1,7 @@
 export default function nav(req, res) {
     res.json(
         {
-            text: "Here we should have a few...",
+            text: "Here we should have a few words about what and who the company is. This should serve well for SEO purposes.",
             title: "Contacta con nosotros",
             tel: "(054) 1234567",
             mail: "info@nomadperu.com.pe",
@@ -10,10 +10,10 @@ export default function nav(req, res) {
             facebookSrc: "https://es-la.facebook.com/" ,
             twitterSrc: "https://twitter.com/?lang=es",
             instagramSrc: "https://instagram.com/",
-            youtubeIcon: " ",
-            facebookIcon: "../../public/img/youtube-icon.png",
-            twitterIcon: "../../public/img/youtube-icon.png",
-            instagramIcon: "../public/img/youtube-icon.png",
+            youtubeIcon: "/img/youtube-icon.png ",
+            facebookIcon: "/img/facebook-icon.png",
+            twitterIcon: "/img/twitter-icon.png",
+            instagramIcon: "/img/instagram-icon.png",
             youtubeAlt: "Youtube",
             facebookAlt: "Facebook" ,
             twitterAlt: "Twitter",

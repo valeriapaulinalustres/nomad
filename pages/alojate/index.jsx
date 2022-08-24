@@ -1,7 +1,10 @@
 
-
 export default function Alojate() {
+
   return (
-    <div>Alojate</div>
+    <div>
+      <h2>Alojate</h2>
+      
+    </div>
   )
 }

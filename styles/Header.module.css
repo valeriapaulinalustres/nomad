@@ -1,0 +1,61 @@
+
+.headerContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 30px;
+  
+}
+
+.navContainer{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7px;
+}
+
+.headerLogo{
+    position: absolute;
+    z-index: 10;
+   top: 40px;
+    background-color: white;
+}
+
+.headerButton{
+    background-color: blueviolet;
+    border: none;
+    padding: 8px 4px;
+    border-radius: 3px;
+    color: white;
+    margin: 5px;
+}
+
+.headerLanguage{
+    margin: 10px;
+    border-left: 1px solid grey;
+    padding-left: 10px;
+}
+
+.menulistContainer{
+    position: absolute;
+    z-index: 10;
+    top: 70px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 200px;
+}
+
+.menulistLinks{
+    margin: 10px 0px;
+}

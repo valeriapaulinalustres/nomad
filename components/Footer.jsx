@@ -1,39 +1,36 @@
 import Link from 'next/link'
 import { useState, useContext } from "react";
-import styles from '../styles/Layout.module.css'
+import styles from '../styles/Footer.module.css'
 import navbarContext from '../context/navbarContext';
+import Image from 'next/image'
 
 export default function Footer() {
 
 
   //-------------recibes footer from context------------------------
   const { footerItems, navbarItems } = useContext(navbarContext);
-  //console.log(footerItems)
   //----------------------------------------------------------------
-console.log(footerItems.youtubeSrc)
 
   return (
     <div>
-      <section>
+      <section className={styles.footerFirstSection}>
         <div>
-          <img src={footerItems.nomad} alt={footerItems.nomadAlt}></img>
-          <p>{footerItems.text}</p>
+          <Image src={footerItems.nomad} alt={footerItems.nomadAlt} width="200px" height="50px"></Image>
+          <p className={styles.footerTextSeo}>{footerItems.text}</p>
           <nav>
-        
+          <a href={footerItems.youtubeSrc}><Image src={footerItems.youtubeIcon} alt={footerItems.youtubeAlt} width="30px" height="30px" className={styles.icons}></Image></a>
+          <a href={footerItems.facebookSrc}><Image src={footerItems.facebookIcon} alt={footerItems.facebookAlt} width="30px" height="30px" className={styles.icons}></Image></a>
+          <a href={footerItems.twitterSrc}><Image src={footerItems.twitterIcon} alt={footerItems.twitterAlt} width="30px" height="30px" className={styles.icons}></Image></a>
+          <a href={footerItems.instagramSrc}><Image src={footerItems.instagramIcon} alt={footerItems.instagramAlt} width="30px" height="30px" className={styles.icons}></Image></a>
           </nav>
         </div>
         <div>
           <h2>{footerItems.title}</h2>
           <h3>{footerItems.tel}</h3>
           <h3>{footerItems.mail}</h3>
-          <nav>
-          <a href={footerItems.youtubeSrc}><img src={footerItems.youtubeIcon} alt={footerItems.youtubeAlt}></img></a>
-          <a href={footerItems.facebookSrc}><img src={footerItems.facebookIcon} alt={footerItems.facebookAlt}></img></a>
-          <a href={footerItems.twitterSrc}><img src={footerItems.twitterIcon} alt={footerItems.twitterAlt}></img></a>
-          <a href={footerItems.instagramSrc}><img src={footerItems.instagramIcon} alt={footerItems.instagramAlt}></img></a>
-          </nav>
+         
         </div>
-        <nav>
+        <nav className={styles.footerNavlinks}>
           {navbarItems.map((element, index) => {
             return (
               <Link
@@ -45,8 +42,8 @@ console.log(footerItems.youtubeSrc)
           })}
         </nav>
       </section>
-      <section>
-        <h2>{footerItems.greeting}</h2>
+      <section className={styles.greeting}>
+        <h2 className={styles.greetingText}>{footerItems.greeting}</h2>
       </section>
     </div>
   )

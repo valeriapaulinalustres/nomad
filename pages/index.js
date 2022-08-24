@@ -3,34 +3,61 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState, useContext, useEffect } from 'react'
 import navbarContext from '../context/navbarContext';
+import Slider from '../components/Slider';
+
+//import Image from 'next/image'
 
 export default function Home(props) {
 
 
-//---------send navbar, footer and home to context and brings homeItems-------------
-const { setNavbarItems, setFooterItems, homeItems, setHomeItems } = useContext(navbarContext);
+  //---------send navbar, footer and home to context and brings homeItems-------------
+  const { setNavbarItems, setFooterItems, homeItems, setHomeItems, setHotelsItems, setSliderItems } = useContext(navbarContext);
 
 
-useEffect(() => {
-  setNavbarItems(props.nav)
-  setFooterItems(props.footer)
-  setHomeItems(props.home)
-}, [])
+  useEffect(() => {
+    setNavbarItems(props.nav)
+    setFooterItems(props.footer)
+    setHomeItems(props.home)
+    setHotelsItems(props.hotels)
+    setSliderItems(props.slider)
+  }, [])
 
-//-------------------------------------------
+  //-------------------------------------------
 
   return (
-   <Layout title="Nomad" description="Working around the world" >
-    <div>
-      <section>
-        <h1>{homeItems.title}</h1>
-      </section>
-      <section>
-        <p>{homeItems.text1}<br/>{homeItems.text2}<span>{homeItems.text3}</span><br/>{homeItems.text4}</p>
-      </section>
-      <section></section>
-    </div>
-   </Layout>
+    <Layout title="Nomad" description="Working around the world" >
+      <div className={styles.homeContainer}>
+        <section className={styles.homeFirstSection}>
+          <h1>{homeItems.title}</h1>
+          <div className={styles.featuresContainer}>
+           <div>
+            <p>{homeItems.title}</p>
+            <p>{homeItems.features}</p>
+            <p>{homeItems.featuresOneText}</p>
+           </div>
+           <div>
+            <p>{homeItems.featuresTwoNumber}</p>
+            <p>{homeItems.featuresTwoTitle}</p>
+            <p>{homeItems.featuresTwoText}</p>
+           </div>
+           <div>
+            <p>{homeItems.featuresThreeNumber}</p>
+            <p>{homeItems.featuresThreeTitle}</p>
+            <p>{homeItems.featuresThreeText}</p>
+           </div>
+          </div>
+        </section>
+        <section className={styles.homeSecondSection}>
+          <p >{homeItems.text1}<br />{homeItems.text2}<span>{homeItems.text3}</span><br />{homeItems.text4}</p>
+        </section>
+        <section className={styles.homeThirdSection}>
+          <h2 className={styles.sliderTitle}>{homeItems.slidertitle}</h2>
+          <p className={styles.sliderText}>{homeItems.slidertext}</p>
+        <Slider />
+        </section>
+       
+      </div>
+    </Layout>
   )
 }
 
@@ -39,18 +66,28 @@ useEffect(() => {
 export async function getServerSideProps(context) {
 
   //SSR navbar
-  let data = await fetch  ('http://localhost:3000/api/nav')
+  let data = await fetch('http://localhost:3000/api/nav')
   let nav = await data.json()
-//SSR footer
-  let dataFooter = await fetch  ('http://localhost:3000/api/footer')
+
+  //SSR footer
+  let dataFooter = await fetch('http://localhost:3000/api/footer')
   let footer = await dataFooter.json()
 
   //SSR footer
-  let dataHome = await fetch  ('http://localhost:3000/api/home')
+  let dataHome = await fetch('http://localhost:3000/api/home')
   let home = await dataHome.json()
 
+  //SSR hotels availability
+  let dataHotels = await fetch('http://localhost:3000/api/hotels/availability')
+  let hotels = await dataHotels.json()
+
+
+  //SSR slider
+  let dataSlider = await fetch('http://localhost:3000/api/slider')
+  let slider = await dataSlider.json()
+
   return {
-    props: {nav, footer, home}, // will be passed to the page component as props
+    props: { nav, footer, home, hotels, slider }, // passed to the page component as props
   }
 }
 //--------------------------------------------------------------
