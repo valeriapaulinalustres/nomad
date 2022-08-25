@@ -3,7 +3,6 @@ export default function nav(req, res) {
         {
             text: "Here we should have a few...",
             title: "Contacta con nosotros",
-            
         },
     )
 }

@@ -14,13 +14,6 @@ export default function nav(req, res) {
             featuresnumberone: "1",
             featuresnumbertwo: "2",
             featuresnumberthree: "3",
-            
-
-
-
-
-
-           
         },
     )
 }

@@ -1,14 +1,11 @@
 import Layout from '../components/layout'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState, useContext, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import navbarContext from '../context/navbarContext';
 import Slider from '../components/Slider';
 
-//import Image from 'next/image'
 
 export default function Home(props) {
-
 
   //---------send navbar, footer and home to context and brings homeItems-------------
   const { setNavbarItems, setFooterItems, homeItems, setHomeItems, setHotelsItems, setSliderItems } = useContext(navbarContext);
@@ -28,7 +25,6 @@ export default function Home(props) {
 
     <Layout title="Nomad" description="Working around the world" >
       <div className={styles.homeContainer}>
-
         <section className={styles.homeFirstSection}>
           <div className={styles.homeFirstSectionContent}>
             <h1 className={styles.homeTitle}>{homeItems.title}</h1>
@@ -47,7 +43,6 @@ export default function Home(props) {
               </div>
             </div>
           </div>
-
         </section>
 
         <section className={styles.homeSecondSection}>

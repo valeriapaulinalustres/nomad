@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'next/link';
 import Navbar from './Navbar';
 import MenuList from './MenuList';
 import Reserve from './Reserve';
@@ -13,12 +12,10 @@ function Header() {
   const [reserve, setReserve] = useState(false)
 
   return (
-    <div >
-     
-        <a href="/" className={styles.headerLogo}>
-          <Image src="/img/logo.png" width="100px" height="18px" alt="logo" />
-        </a>
-     
+    <div>
+      <a href="/" className={styles.headerLogo}>
+        <Image src="/img/logo.png" width="100px" height="18px" alt="logo" />
+      </a>
 
       <div className={styles.headerContainer}>
         <div className={styles.navContainer}>

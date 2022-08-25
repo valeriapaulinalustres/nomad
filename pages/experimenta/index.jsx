@@ -1,11 +1,14 @@
 import styles from '../../styles/Layout.module.css'
+import Layout from '../../components/layout'
 
 export default function Alojate() {
 
   return (
-    <div className={styles.otherPages}>
-      <h2>Experimenta</h2>
-      
-    </div>
+    <Layout title="Nomad | Experimenta" description="Working around the world" >
+      <div className={styles.otherPages}>
+        <h2>Experimenta</h2>
+      </div>
+    </Layout>
+
   )
 }

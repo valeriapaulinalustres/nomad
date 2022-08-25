@@ -7,18 +7,13 @@ import Cursor from '../components/Cursor'
 
 function MyApp({ Component, pageProps }) {
   return <>
-  
-  <Cursor />
-  <NavbarProvider>
-  <Header />
-  <Component {...pageProps} />
-  <Footer />
-  </NavbarProvider>
-  
-  
-  
+    <Cursor />
+    <NavbarProvider>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </NavbarProvider>
   </>
-  
 }
 
 export default MyApp

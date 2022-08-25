@@ -7,7 +7,7 @@ export default function nav(req, res) {
             mail: "E: info@nomadperu.com.pe",
             greeting: "Gracias por scrollear :)",
             youtubeSrc: "https://youtube.com/",
-            facebookSrc: "https://es-la.facebook.com/" ,
+            facebookSrc: "https://es-la.facebook.com/",
             twitterSrc: "https://twitter.com/?lang=es",
             instagramSrc: "https://instagram.com/",
             youtubeIcon: "/img/youtube-icon.png ",
@@ -15,7 +15,7 @@ export default function nav(req, res) {
             twitterIcon: "/img/twitter-icon.png",
             instagramIcon: "/img/instagram-icon.png",
             youtubeAlt: "Youtube",
-            facebookAlt: "Facebook" ,
+            facebookAlt: "Facebook",
             twitterAlt: "Twitter",
             instagramAlt: "Instagram",
             nomad: "/img/logo.png",
@@ -23,10 +23,3 @@ export default function nav(req, res) {
         },
     )
 }
-/*
- social: [
-                { icon: "<div>Hola</div>", src: "https://youtube.com/" },
-                { icon: "facebook", src: "https://es-la.facebook.com/" },
-                { icon: "<div></div>", src: "https://twitter.com/?lang=es" },
-                { icon: "<div></div>", src: "https://instagram.com/" },]
-                */

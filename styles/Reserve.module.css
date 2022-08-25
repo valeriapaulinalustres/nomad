@@ -1,4 +1,4 @@
-.reserveContainer{
+.reserveContainer {
     position: absolute;
     z-index: 15;
     top: 80px;
@@ -8,13 +8,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    right: 0px; 
+    right: 0px;
     cursor: pointer;
     width: 650px;
     box-shadow: 2px 2px 2px 2px gainsboro;
 }
 
-.reserveTitle{
+.reserveTitle {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,52 +22,50 @@
     width: 100%;
 }
 
-.scale{
+.scale {
     scale: 1.1;
     background-color: white;
     margin: 5px 0px;
     height: 40px;
 }
 
-.hotelsContainer{
+.hotelsContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    
+
 }
 
-.hotelContainer{
+.hotelContainer {
     display: flex;
     flex-direction: row;
-   
     align-items: center;
     margin: 20px 0px;
-    
 }
 
-.inicioImg{
+.inicioImg {
     margin-right: 30px;
     border-radius: 10px;
     width: 200px;
     height: 200px;
     overflow: hidden;
     position: absolute;
-    left:20px;
+    left: 20px;
 }
 
-.imgBlur{
+.imgBlur {
     margin-right: 30px;
     border-radius: 10px;
     width: 200px;
     height: 200px;
     overflow: hidden;
     position: absolute;
-    left:20px;
-    filter: blur(2px);  
+    left: 20px;
+    filter: blur(2px);
 }
 
-.inicioButton{
+.inicioButton {
     background-color: blue;
     color: white;
     border-radius: 5px;
@@ -76,76 +74,75 @@
     margin-top: 10px;
 }
 
-.buttonBlur{
+.buttonBlur {
     background-color: blue;
     color: white;
     border-radius: 5px;
     padding: 10px;
     border: none;
     margin-top: 10px;
-    filter: blur(2px); 
+    filter: blur(2px);
 }
 
-.inicioHotelTitle0{
+.inicioHotelTitle0 {
     font-size: 30px;
     font-weight: 800;
     letter-spacing: 4px;
 }
 
-.hotelTitleBlur0{
+.hotelTitleBlur0 {
     font-size: 30px;
     filter: blur(2px);
     font-weight: 800;
     letter-spacing: 4px;
 }
 
-.inicioHotelTitle1{
+.inicioHotelTitle1 {
     font-size: 30px;
     font-family: 'Caveat', cursive;
     font-style: italic;
 }
 
-.hotelTitleBlur1{
+.hotelTitleBlur1 {
     font-size: 30px;
     filter: blur(2px);
     font-family: 'Caveat', cursive;
     font-style: italic;
 }
 
-.inicioHotelTitle2{
+.inicioHotelTitle2 {
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.hotelTitleBlur2{
+.hotelTitleBlur2 {
     font-size: 30px;
     filter: blur(2px);
     font-family: 'Courier New', Courier, monospace;
 }
 
 
-.inicioHotelSubtitle{
+.inicioHotelSubtitle {
     font-size: 16px;
     margin: 5px 0px;
     font-weight: 300;
 }
 
-.hotelSubtitleBlur{
+.hotelSubtitleBlur {
     font-size: 16px;
     margin: 5px 0px;
     filter: blur(2px);
     font-weight: 300;
 }
 
-.inicioHotelDescription{
+.inicioHotelDescription {
     margin: 5px 0px;
     height: 40px;
     font-size: 12px;
     font-weight: 200;
-   
 }
 
-.hotelDescriptionBlur{
+.hotelDescriptionBlur {
     margin: 5px 0px;
     filter: blur(2px);
     height: 40px;
@@ -153,16 +150,16 @@
     font-weight: 200;
 }
 
-.inicioPrice{
+.inicioPrice {
     font-size: 14px;
 }
 
-.priceBlur{
+.priceBlur {
     font-size: 14px;
     filter: blur(2px);
 }
 
-.textContainer{
+.textContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -172,6 +169,6 @@
     align-items: flex-start;
 }
 
-.reserveClose{
+.reserveClose {
     color: gray;
 }

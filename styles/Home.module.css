@@ -1,87 +1,76 @@
-.homeFirstSection{
-   
-    background: url(/img/nomad.jpg) ;
-	background-size: 100%;
-	top: 0;
-	width: 100%;
-	position: relative;
- height: 900px;
+.homeFirstSection {
+    background: url(/img/nomad.jpg);
+    background-size: 100%;
+    top: 0;
+    width: 100%;
+    position: relative;
+    height: 900px;
     background-repeat: no-repeat;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     overflow-y: hidden;
-   
-
 }
 
-.homeFirstSectionContent{
+.homeFirstSectionContent {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin: 50px;
 }
 
-.homeTitle{
+.homeTitle {
     color: white;
     font-size: 80px;
     width: 380px;
     font-weight: 800;
-   
-  
-
 }
 
-.homeSecondSection{
+.homeSecondSection {
     height: 900px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.homeSecondSection p{
-     font-size: 50px;
-     text-align: center;
-
+.homeSecondSection p {
+    font-size: 50px;
+    text-align: center;
 }
 
-.homeSecondSection p span{
+.homeSecondSection p span {
     background-color: blue;
     color: white;
     padding: 0px 10px;
     font-weight: 700;
 }
 
-.featuresContainer{
-    
-   display: flex;
-   flex-direction: row;
-
-
+.featuresContainer {
+    display: flex;
+    flex-direction: row;
 }
 
-.featuresContent{
- 
+.featuresContent {
     width: 100px;
     padding: 35px;
     color: white;
     margin-top: 200px;
 }
 
-.homeThirdSection{
+.homeThirdSection {
     background-color: grey;
     margin-right: 100px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    
+
 }
 
-.sliderTitle{
+.sliderTitle {
     padding: 15px 15px 15px 75px;
-    
+
 }
 
-.sliderText{
+.sliderText {
     width: 300px;
     padding: 5px 15px 0px 75px;
     font-size: 12px;

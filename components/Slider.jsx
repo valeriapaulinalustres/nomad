@@ -1,4 +1,3 @@
-import images from '../exports/images'
 import { motion } from 'framer-motion'
 import styles from '../styles/Slider.module.css'
 import Image from 'next/image'
@@ -7,18 +6,9 @@ import { useContext } from 'react'
 
 export default function Slider() {
 
-
     //-------------recibes slider from context------------------------
     const { sliderItems } = useContext(navbarContext);
     //----------------------------------------------------------------
-
-    /*
-        const logos = [
-            {id: 1, img:"/img/cooking.jpg", icon: "/img/maps.svg", city: "Arequipa", title: "URBAN", text:"", services:"", icon1: "", icon2:"", icon3:""},
-            {id:2, img:"/img/friends.jpg", icon: "/img/maps.svg", city: "Arequipa", title: "Tribe", text:"Hub de exploradores, artistas y profesionales que ven al mundo su verdadero hogar", services: "Servicios de este hotel", icon1: "/img/bed.png", icon2:"/img/restaurante.png", icon3:"/img/carousel.png", alt1:"cama", alt2:"restaurante", alt3:"carousel"},
-            {id:3, img:"/img/family.jpg", icon: "/img/maps.svg", city: "Arequipa", title: "Family", text:"", services: "", icon1: "", icon2:"", icon3:""}
-        ]
-        */
 
 
     return (
@@ -34,7 +24,12 @@ export default function Slider() {
                         {/*----Slider tags---- */}
                         <div className={styles[`logo${index}`]}>
                             <div className={styles.iconTitle}>
-                                <Image src={el.icon} width="20px" height="20px" className={styles.mapsIcon} fill="#fff"></Image>
+                                <Image
+                                    src={el.icon}
+                                    width="20px"
+                                    height="20px"
+                                    className={styles.mapsIcon}
+                                ></Image>
                                 <p>{el.city}</p>
                             </div>
 
@@ -44,23 +39,35 @@ export default function Slider() {
                             {el.icon1 &&
                                 <div className={styles.servicesIconsContainer}>
                                     <div className={styles.servicesIcons}>
-                                        <Image src={el.icon1} width="20px" height="20px" alt={el.alt1} ></Image>
+                                        <Image
+                                            src={el.icon1}
+                                            width="20px"
+                                            height="20px"
+                                            alt={el.alt1}
+                                        ></Image>
                                     </div>
                                     <div className={styles.servicesIcons}>
-                                        <Image src={el.icon2} width="20px" height="20px" alt={el.alt2} ></Image>
+                                        <Image
+                                            src={el.icon2}
+                                            width="20px"
+                                            height="20px"
+                                            alt={el.alt2}
+                                        ></Image>
                                     </div>
                                     <div className={styles.servicesIcons}>
-                                        <Image src={el.icon3} width="20px" height="20px" alt={el.alt3} ></Image>
+                                        <Image
+                                            src={el.icon3}
+                                            width="20px"
+                                            height="20px"
+                                            alt={el.alt3}
+                                        ></Image>
                                     </div>
-
                                 </div>
                             }
-
                         </div>
                     </motion.div>
                 ))}
             </motion.div>
-
         </motion.div>
     )
 }

@@ -9,10 +9,9 @@ const NavbarProvider = ({ children }) => {
   const [homeItems, setHomeItems] = useState([])
   const [hotelsItems, setHotelsItems] = useState([])
   const [sliderItems, setSliderItems] = useState([])
-//console.log(navbarItems)
 
 
-//-----exports------
+  //-----exports------
   const data = { navbarItems, setNavbarItems, footerItems, setFooterItems, homeItems, setHomeItems, hotelsItems, setHotelsItems, sliderItems, setSliderItems }
 
   return (

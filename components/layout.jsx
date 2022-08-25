@@ -1,32 +1,24 @@
 import Head from "next/head";
-import styles from '../styles/Layout.module.css'
-import Link from 'next/link'
-import { useState } from "react";
 
 
-
-
-
-export default function Layout({children, headTitle, headDescription}) {
-
+export default function Layout({ children, headTitle, headDescription }) {
 
   return (
     <div>
-<Head>
-    <title>{headTitle}</title>
-    <meta name="description" content={headDescription} />
-    <link rel="icon" href="/favicon.ico" />
-</Head>
+      <Head>
+        <title>{headTitle}</title>
+        <meta name="description" content={headDescription} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-
-<main>{children}</main>
+      <main>{children}</main>
 
     </div>
   )
 }
 
-Layout.defaultProps ={
-    title: "Nomad",
-    description: "Working around the world"
+Layout.defaultProps = {
+  title: "Nomad",
+  description: "Working around the world"
 }
 

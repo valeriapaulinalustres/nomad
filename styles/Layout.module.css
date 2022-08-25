@@ -1,25 +1,25 @@
-.navbarContainer{
+.navbarContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.navbarLink{
+.navbarLink {
     margin: 15px;
-  font-weight: 300;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 1px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
 }
 
-.otherPages{
+.otherPages {
     height: 400px;
     background-color: palevioletred;
     position: relative;
 }
 
-.otherPages h2{
-   padding: 200px;
+.otherPages h2 {
+    padding: 200px;
     color: white;
     text-align: center;
 }
