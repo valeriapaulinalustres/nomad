@@ -1,23 +1,177 @@
+.reserveContainer{
+    position: absolute;
+    z-index: 15;
+    top: 80px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    right: 0px; 
+    cursor: pointer;
+    width: 650px;
+    box-shadow: 2px 2px 2px 2px gainsboro;
+}
+
+.reserveTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .scale{
-    scale: 2;
+    scale: 1.1;
+    background-color: white;
+    margin: 5px 0px;
+    height: 40px;
+}
+
+.hotelsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+
+.hotelContainer{
+    display: flex;
+    flex-direction: row;
+   
+    align-items: center;
+    margin: 20px 0px;
+    
+}
+
+.inicioImg{
+    margin-right: 30px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    left:20px;
+}
+
+.imgBlur{
+    margin-right: 30px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    left:20px;
+    filter: blur(2px);  
+}
+
+.inicioButton{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+}
+
+.buttonBlur{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    filter: blur(2px); 
+}
+
+.inicioHotelTitle0{
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.hotelTitleBlur0{
+    font-size: 30px;
+    filter: blur(2px);
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.inicioHotelTitle1{
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    font-style: italic;
+}
+
+.hotelTitleBlur1{
+    font-size: 30px;
+    filter: blur(2px);
+    font-family: 'Caveat', cursive;
+    font-style: italic;
+}
+
+.inicioHotelTitle2{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.hotelTitleBlur2{
+    font-size: 30px;
+    filter: blur(2px);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
-
-.container{
-    background-color: goldenrod;
-    margin: 20px;
+.inicioHotelSubtitle{
+    font-size: 16px;
+    margin: 5px 0px;
+    font-weight: 300;
 }
 
-.blur{
-  filter: blur(5px);  
+.hotelSubtitleBlur{
+    font-size: 16px;
+    margin: 5px 0px;
+    filter: blur(2px);
+    font-weight: 300;
 }
 
-.inicio{
-    color: green;
+.inicioHotelDescription{
+    margin: 5px 0px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 200;
+   
 }
 
-.red{
-    color: red;
+.hotelDescriptionBlur{
+    margin: 5px 0px;
+    filter: blur(2px);
+    height: 40px;
+    font-size: 12px;
+    font-weight: 200;
 }
 
+.inicioPrice{
+    font-size: 14px;
+}
+
+.priceBlur{
+    font-size: 14px;
+    filter: blur(2px);
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    align-items: flex-start;
+}
+
+.reserveClose{
+    color: gray;
+}

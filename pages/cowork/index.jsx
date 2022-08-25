@@ -1,7 +1,11 @@
+import styles from '../../styles/Layout.module.css'
 
+export default function Alojate() {
 
-export default function Cowork() {
   return (
-    <div>Co-work</div>
+    <div className={styles.otherPages}>
+      <h2>Co-work</h2>
+      
+    </div>
   )
 }

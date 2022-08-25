@@ -24,10 +24,11 @@ export default function Navbar(props) {
               className={styles.navbarLink}
               key={index}
               
-            >{element.navName}
+            ><h3 className={styles.navbarLink}>{element.navName}</h3>
             </Link>
             )} else {
               return (
+                
                 <h3
                   onMouseEnter={()=>props.setMenu(true)}
                   onMouseLeave={()=>props.setMenu(false)}

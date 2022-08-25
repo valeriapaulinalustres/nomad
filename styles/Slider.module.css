@@ -26,7 +26,7 @@ position: relative;
     width: 100%;
     pointer-events: none;
     border-radius: 20px;
-   
+    cursor: none;
 }
 
 
@@ -38,7 +38,6 @@ position: relative;
     bottom: 70px;
     z-index: +5;
 overflow-y: hidden;
-height: 100px;
     border-radius: 15px;
     padding: 20px;
    display: flex;
@@ -46,6 +45,7 @@ height: 100px;
    justify-content: flex-start;
    align-items: flex-start;
    color: white;
+   width: 200px;
  
 }
 .logo1{
@@ -70,7 +70,6 @@ align-items: flex-start;
     right: -4px;
     bottom: 70px;
     z-index: +5;
-height: 100px;
     border-radius: 15px;
     padding: 20px;
    display: flex;
@@ -78,11 +77,14 @@ height: 100px;
    justify-content: flex-start;
    align-items: flex-start; 
    color: white;
+   width: 200px;
 }
 
 .iconTitle{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 
 }
 
@@ -95,12 +97,31 @@ height: 100px;
     padding: 15px 0px;
 }
 
+.servicesIconsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
 .servicesIcons{
-    color: white;
-    padding: 30px 5px 5px 0px;
+    margin-right: 10px;
+   
 }
 
-.mapsIcon{
-    color: white;
+.title0{
+    letter-spacing: 4px;
+    font-weight: 800;
+    margin-top: 5px;
 }
 
+.title1{
+   font-weight: 200;
+   letter-spacing: 2px;
+    margin-top: 5px;
+    font-family: 'Caveat', cursive;
+    font-style: italic;
+}
+
+.title2{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 5px;
+}

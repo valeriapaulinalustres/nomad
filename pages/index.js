@@ -25,37 +25,41 @@ export default function Home(props) {
   //-------------------------------------------
 
   return (
+
     <Layout title="Nomad" description="Working around the world" >
       <div className={styles.homeContainer}>
+
         <section className={styles.homeFirstSection}>
-          <h1>{homeItems.title}</h1>
-          <div className={styles.featuresContainer}>
-           <div>
-            <p>{homeItems.title}</p>
-            <p>{homeItems.features}</p>
-            <p>{homeItems.featuresOneText}</p>
-           </div>
-           <div>
-            <p>{homeItems.featuresTwoNumber}</p>
-            <p>{homeItems.featuresTwoTitle}</p>
-            <p>{homeItems.featuresTwoText}</p>
-           </div>
-           <div>
-            <p>{homeItems.featuresThreeNumber}</p>
-            <p>{homeItems.featuresThreeTitle}</p>
-            <p>{homeItems.featuresThreeText}</p>
-           </div>
+          <div className={styles.homeFirstSectionContent}>
+            <h1 className={styles.homeTitle}>{homeItems.title}</h1>
+            <div className={styles.featuresContainer}>
+              <div className={styles.featuresContent}>
+                <p>{homeItems.featuresnumberone}</p>
+                <p>{homeItems.featuresone}</p>
+              </div>
+              <div className={styles.featuresContent}>
+                <p>{homeItems.featuresnumbertwo}</p>
+                <p>{homeItems.featurestwo}</p>
+              </div>
+              <div className={styles.featuresContent}>
+                <p>{homeItems.featuresnumberthree}</p>
+                <p>{homeItems.featuresthree}</p>
+              </div>
+            </div>
           </div>
+
         </section>
+
         <section className={styles.homeSecondSection}>
           <p >{homeItems.text1}<br />{homeItems.text2}<span>{homeItems.text3}</span><br />{homeItems.text4}</p>
         </section>
+
         <section className={styles.homeThirdSection}>
           <h2 className={styles.sliderTitle}>{homeItems.slidertitle}</h2>
           <p className={styles.sliderText}>{homeItems.slidertext}</p>
-        <Slider />
+          <Slider />
         </section>
-       
+
       </div>
     </Layout>
   )

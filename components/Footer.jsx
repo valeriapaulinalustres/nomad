@@ -14,28 +14,29 @@ export default function Footer() {
   return (
     <div>
       <section className={styles.footerFirstSection}>
-        <div>
-          <Image src={footerItems.nomad} alt={footerItems.nomadAlt} width="200px" height="50px"></Image>
+        <div className={styles.footerDivs}>
+          <Image src={footerItems.nomad} alt={footerItems.nomadAlt} width="80px" height="18px"></Image>
           <p className={styles.footerTextSeo}>{footerItems.text}</p>
-          <nav>
+          <nav className={styles.footerIconsContainer }>
           <a href={footerItems.youtubeSrc}><Image src={footerItems.youtubeIcon} alt={footerItems.youtubeAlt} width="30px" height="30px" className={styles.icons}></Image></a>
           <a href={footerItems.facebookSrc}><Image src={footerItems.facebookIcon} alt={footerItems.facebookAlt} width="30px" height="30px" className={styles.icons}></Image></a>
           <a href={footerItems.twitterSrc}><Image src={footerItems.twitterIcon} alt={footerItems.twitterAlt} width="30px" height="30px" className={styles.icons}></Image></a>
           <a href={footerItems.instagramSrc}><Image src={footerItems.instagramIcon} alt={footerItems.instagramAlt} width="30px" height="30px" className={styles.icons}></Image></a>
           </nav>
         </div>
-        <div>
+
+        <div className={styles.footerDivs}>
           <h2>{footerItems.title}</h2>
-          <h3>{footerItems.tel}</h3>
-          <h3>{footerItems.mail}</h3>
+          <h4>{footerItems.tel}</h4>
+          <h4>{footerItems.mail}</h4>
          
         </div>
-        <nav className={styles.footerNavlinks}>
+        <nav className={styles.footerDivs}>
           {navbarItems.map((element, index) => {
             return (
               <Link
                 href={element.src}
-                className={styles.navbar}
+                className={styles.footerNavLink}
                 key={index}
               >{element.navName}
               </Link>)

@@ -3,8 +3,8 @@ export default function nav(req, res) {
         {
             text: "Here we should have a few words about what and who the company is. This should serve well for SEO purposes.",
             title: "Contacta con nosotros",
-            tel: "(054) 1234567",
-            mail: "info@nomadperu.com.pe",
+            tel: "T: (054) 1234567",
+            mail: "E: info@nomadperu.com.pe",
             greeting: "Gracias por scrollear :)",
             youtubeSrc: "https://youtube.com/",
             facebookSrc: "https://es-la.facebook.com/" ,
@@ -18,7 +18,7 @@ export default function nav(req, res) {
             facebookAlt: "Facebook" ,
             twitterAlt: "Twitter",
             instagramAlt: "Instagram",
-            nomad: "",
+            nomad: "/img/logo.png",
             nomadAlt: "Logo de Nomad",
         },
     )

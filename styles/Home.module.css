@@ -11,14 +11,24 @@
     justify-content: flex-start;
     align-items: center;
     overflow-y: hidden;
-    background-color: green;
+   
+
 }
 
-.homeFirstSection h1{
-    color: white;
-    font-size: 60px;
+.homeFirstSectionContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin: 50px;
-    width: 20%;
+}
+
+.homeTitle{
+    color: white;
+    font-size: 80px;
+    width: 380px;
+    font-weight: 800;
+   
+  
 
 }
 
@@ -39,15 +49,30 @@
     background-color: blue;
     color: white;
     padding: 0px 10px;
+    font-weight: 700;
 }
 
 .featuresContainer{
-    background-color: rebeccapurple;
+    
+   display: flex;
+   flex-direction: row;
 
+
+}
+
+.featuresContent{
+ 
+    width: 100px;
+    padding: 35px;
+    color: white;
+    margin-top: 200px;
 }
 
 .homeThirdSection{
     background-color: grey;
+    margin-right: 100px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     
 }
 

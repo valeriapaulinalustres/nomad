@@ -1,3 +1,7 @@
+.nomad{
+    width: 80px;
+}
+
 .icons{
     width: 30px;
     height: 30px;
@@ -10,6 +14,7 @@
     padding: 30px;
     display: flex;
     justify-content: center;
+    font-size: 30px;
 }
 
 .greetingText{
@@ -22,15 +27,48 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 50px;
+    border-top: 1px solid;
+    border-image:   linear-gradient(to right, blue 20%, greenyellow 20%, greenyellow 40%, fuchsia 40%, fuchsia 60%, teal 60%, teal 80%,  blue 80%) 5;
+    padding-top: 50px;
+    
+    ;
 }
 
 .footerTextSeo{
     width: 280px;
     font-size: 12px;
+    margin-top: 20px;
 }
 
-.footerNavlinks{
+
+
+
+.footerDivs{
+    width: 180px;
     display: flex;
     flex-direction: column;
 
+    overflow: inherit;
+}
+
+.footerDivs h2{
+    margin-bottom: 10px;
+}
+
+.footerDivs h4{
+    font-weight: 400;
+    font-size: 14px;
+   
+}
+
+.footerDivs h2{
+    width: 300px;
+}
+
+.footerIconsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
 }
