@@ -42,6 +42,11 @@
     align-items: flex-start;
     color: white;
     width: 200px;
+    transition: 2s;
+}
+
+.logo0:hover{
+    background-color: fuchsia;
 }
 
 .logo1 {
@@ -59,6 +64,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    transition: 2s;
+}
+
+
+.logo1:hover{
+    background-color: rgba(95, 158, 160, 0.8);
 }
 
 .logo2 {
@@ -75,6 +86,11 @@
     align-items: flex-start;
     color: white;
     width: 200px;
+    transition: 2s;
+}
+
+.logo2:hover{
+    background-color: blue;
 }
 
 .iconTitle {

@@ -15,7 +15,20 @@
     display: flex;
     justify-content: center;
     font-size: 30px;
+    animation-name: greeting;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
+
+@keyframes greeting {
+    0%   {background-color: blue;}
+    20%  {background-color: fuchsia;}
+    40%  {background-color: greenyellow;}
+    60% {background-color: green;}
+    80% {background-color: teal;}
+    100% {background-color: blueviolet;}
+  }
 
 .greetingText {
     font-weight: lighter;
@@ -63,4 +76,12 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+.footerNavLink{
+    font-size: 16px;
+    font-weight: 200;
+}
+.footerNavLink:hover{
+    color: blue;
 }

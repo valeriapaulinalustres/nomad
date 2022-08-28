@@ -45,8 +45,8 @@ export default function Home(props) {
           </div>
         </section>
 
-        <section className={styles.homeSecondSection}>
-          <p >{homeItems.text1}<br />{homeItems.text2}<span>{homeItems.text3}</span><br />{homeItems.text4}</p>
+        <section className={styles.homeSecondSection} >
+          <p>{homeItems.text1}<br />{homeItems.text2}<span>{homeItems.text3}</span><br />{homeItems.text4}</p>
         </section>
 
         <section className={styles.homeThirdSection}>

@@ -10,10 +10,12 @@ export default function Footer() {
   const { footerItems, navbarItems } = useContext(navbarContext);
   //----------------------------------------------------------------
 
+  console.log(footerItems)
+
   return (
     <div>
       <section className={styles.footerFirstSection}>
-        
+
         <div className={styles.footerDivs}>
           <Image src={footerItems.nomad}
             alt={footerItems.nomadAlt}
@@ -59,9 +61,9 @@ export default function Footer() {
             return (
               <Link
                 href={element.src}
-                className={styles.footerNavLink}
                 key={index}
-              >{element.navName}
+              >
+                <h3 className={styles.footerNavLink}>{element.navName}</h3>
               </Link>)
           })}
         </nav>

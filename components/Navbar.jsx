@@ -10,7 +10,6 @@ export default function Navbar(props) {
 
   //----------------------------------------------------------------
 
-
   return (
     <div className={styles.navbarContainer}>
       {navbarItems.map((element, index) => {

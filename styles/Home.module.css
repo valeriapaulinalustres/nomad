@@ -43,7 +43,19 @@
     color: white;
     padding: 0px 10px;
     font-weight: 700;
+    animation-name: text3;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes text3 {
+    0%   {background-color: blueviolet;}
+    20%  {background-color: fuchsia;}
+    40%  {background-color: orange;}
+    60% {background-color: yellow;}
+    80% {background-color: green;}
+    100% {background-color: blue;}
+  }
 
 .featuresContainer {
     display: flex;
@@ -55,10 +67,17 @@
     padding: 35px;
     color: white;
     margin-top: 200px;
+    transition: transform 2s;
+}
+
+.featuresContent:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    transform: scale(1.2);
 }
 
 .homeThirdSection {
-    background-color: grey;
+    background-color: rgb(228, 228, 228);
     margin-right: 100px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
