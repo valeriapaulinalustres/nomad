@@ -10,43 +10,56 @@ export default function Footer() {
   const { footerItems, navbarItems } = useContext(navbarContext);
   //----------------------------------------------------------------
 
-  console.log(footerItems)
 
   return (
     <div>
       <section className={styles.footerFirstSection}>
 
         <div className={styles.footerDivs}>
-          <Image src={footerItems.nomad}
-            alt={footerItems.nomadAlt}
-            width="80px"
-            height="18px"></Image>
+          {footerItems.nomad &&
+            <Image src={footerItems.nomad}
+              alt={footerItems.nomadAlt}
+              width="80px"
+              height="18px" />
+          }
           <p className={styles.footerTextSeo}>{footerItems.text}</p>
           <nav className={styles.footerIconsContainer}>
             <a href={footerItems.youtubesrc}>
-              <Image src={footerItems.youtubeicon}
-                alt={footerItems.youtubealt}
-                width="30px"
-                height="30px"
-                className={styles.icons}></Image></a>
+              {footerItems.youtubeicon &&
+                <Image src={footerItems.youtubeicon}
+                  alt={footerItems.youtubealt}
+                  width="30px"
+                  height="30px"
+                  className={styles.icons} />
+              }
+            </a>
             <a href={footerItems.facebooksrc}>
-              <Image src={footerItems.facebookicon}
-                alt={footerItems.facebookalt}
-                width="30px"
-                height="30px"
-                className={styles.icons}></Image></a>
+              {footerItems.facebookicon &&
+                <Image src={footerItems.facebookicon}
+                  alt={footerItems.facebookalt}
+                  width="30px"
+                  height="30px"
+                  className={styles.icons} />
+              }
+            </a>
             <a href={footerItems.twittersrc}>
-              <Image src={footerItems.twittericon}
-                alt={footerItems.twitteralt}
-                width="30px"
-                height="30px"
-                className={styles.icons}></Image></a>
+              {footerItems.twittericon &&
+                <Image src={footerItems.twittericon}
+                  alt={footerItems.twitteralt}
+                  width="30px"
+                  height="30px"
+                  className={styles.icons} />
+              }
+            </a>
             <a href={footerItems.instagramsrc}>
-              <Image src={footerItems.instagramicon}
-                alt={footerItems.instagramalt}
-                width="30px"
-                height="30px"
-                className={styles.icons}></Image></a>
+              {footerItems.instagramicon &&
+                <Image src={footerItems.instagramicon}
+                  alt={footerItems.instagramalt}
+                  width="30px"
+                  height="30px"
+                  className={styles.icons} />
+              }
+            </a>
           </nav>
         </div>
 
