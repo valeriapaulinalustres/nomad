@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import Navbar from './Navbar';
 import MenuList from './MenuList';
 import Reserve from './Reserve';
@@ -6,6 +6,8 @@ import styles from '../styles/Header.module.css'
 import Image from 'next/image';
 import gsap from 'gsap';
 import Link from 'next/link';
+import navbarContext from '../context/navbarContext';
+import {useRouter} from 'next/router'
 
 
 function Header() {
@@ -13,6 +15,23 @@ function Header() {
   const [menu, setMenu] = useState(false)
   const [reserve, setReserve] = useState(false)
   const [show, setShow] = useState(true)
+
+ //-------------recibes footer from context------------------------
+ const { headerItems } = useContext(navbarContext);
+ //----------------------------------------------------------------
+
+
+//---change Language------------
+
+const router = useRouter()
+
+
+function handleLanguage (){
+  const language = router.locale == "es" ?  "en" : "es" 
+  router.push(router.pathname, router.pathname, {
+    locale: language
+  })
+}
 
   //---reserve button animation---
   const onEnter = ({ currentTarget }) => {
@@ -53,7 +72,7 @@ function Header() {
           <div className={styles.headerContainer}>
             <div className={styles.navContainer}>
               <Navbar menu={menu} setMenu={setMenu} />
-              <h3 className={styles.headerLanguage}>English</h3>
+              <h3 className={styles.headerLanguage} onClick={handleLanguage}>{headerItems.language}</h3>
               <Link href="#top">
               <button
                 onClick={() => setReserve(!reserve)}
@@ -63,7 +82,7 @@ function Header() {
                 <div className={styles.bagIcon}>
                   <Image src="/img/bag.png" width="20px" height="20px" alt="bag"></Image>
                 </div>
-                <h4 className={styles.btnSmile} >Reservar</h4>
+                <h4 className={styles.btnSmile} >{headerItems.reserve}</h4>
               </button>
               </Link>            
             </div>

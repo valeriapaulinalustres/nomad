@@ -9,10 +9,28 @@ const NavbarProvider = ({ children }) => {
   const [homeItems, setHomeItems] = useState([])
   const [hotelsItems, setHotelsItems] = useState([])
   const [sliderItems, setSliderItems] = useState([])
+  const [headerItems, setHeaderItems] = useState([])
+  const [english, setEnglish] = useState("es")
 
 
   //-----exports------
-  const data = { navbarItems, setNavbarItems, footerItems, setFooterItems, homeItems, setHomeItems, hotelsItems, setHotelsItems, sliderItems, setSliderItems }
+  const data = {
+    navbarItems,
+    setNavbarItems,
+    footerItems,
+    setFooterItems,
+    homeItems,
+    setHomeItems,
+    hotelsItems,
+    setHotelsItems,
+    sliderItems,
+    setSliderItems,
+    headerItems,
+    setHeaderItems,
+    english,
+    setEnglish,
+
+  }
 
   return (
     <navbarContext.Provider value={data}>

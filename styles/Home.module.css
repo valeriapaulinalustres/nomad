@@ -21,9 +21,10 @@
 
 .homeTitle {
     color: white;
-    font-size: 80px;
-    width: 380px;
+    font-size: 76px;
+    width: 440px;
     font-weight: 800;
+    margin-top: 40px;
 }
 
 .homeSecondSection {

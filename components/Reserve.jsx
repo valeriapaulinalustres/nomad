@@ -74,9 +74,9 @@ export default function Reserve({ setReserve }) {
                                                 ? styles.inicioPrice
                                                 : styles.priceBlur}
                                         >
-                                            Desde
+                                            {element.desde}
                                             <b>
-                                                ${element.price}/noche
+                                                {element.price}
                                             </b>
                                         </p>
                                         <button
@@ -84,7 +84,7 @@ export default function Reserve({ setReserve }) {
                                                 ? styles.inicioButton
                                                 : styles.buttonBlur}
                                         >
-                                            Reservar ahora
+                                            {element.btn}
                                         </button>
                                     </div>
                                 </section>

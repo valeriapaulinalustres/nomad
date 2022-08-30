@@ -3,6 +3,7 @@ import { useContext } from "react";
 import styles from '../styles/Layout.module.css'
 import navbarContext from '../context/navbarContext';
 
+
 export default function Navbar(props) {
 
   //-------------recibes navbar from contexts------------------------

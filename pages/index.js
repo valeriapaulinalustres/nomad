@@ -3,23 +3,27 @@ import styles from '../styles/Home.module.css'
 import { useContext, useEffect } from 'react'
 import navbarContext from '../context/navbarContext';
 import Slider from '../components/Slider';
+import {useRouter} from 'next/router'
 
 
 export default function Home(props) {
 
   //---------send navbar, footer and home to context and brings homeItems-------------
-  const { setNavbarItems, setFooterItems, homeItems, setHomeItems, setHotelsItems, setSliderItems } = useContext(navbarContext);
+  const { setNavbarItems, setFooterItems, homeItems, setHomeItems, setHotelsItems, setSliderItems, setHeaderItems, english } = useContext(navbarContext);
 
-
+  
+  const router = useRouter()
+  
   useEffect(() => {
     setNavbarItems(props.nav)
     setFooterItems(props.footer)
     setHomeItems(props.home)
     setHotelsItems(props.hotels)
     setSliderItems(props.slider)
-  }, [])
+    setHeaderItems(props.header)
 
-  //-------------------------------------------
+  }, [router])
+
 
   return (
 
@@ -61,32 +65,36 @@ export default function Home(props) {
 }
 
 //----------SSR-----------------------------------------
-
-export async function getServerSideProps(context) {
+//locale changes language
+export async function getServerSideProps({locale}) {
 
   //SSR navbar
-  let data = await fetch('http://localhost:3000/api/nav')
+  let data = await fetch(`http://localhost:3000/api/nav/${locale}`)
   let nav = await data.json()
 
-  //SSR footer
-  let dataFooter = await fetch('http://localhost:3000/api/footer')
-  let footer = await dataFooter.json()
+  //SSR header
+  let dataHeader = await fetch(`http://localhost:3000/api/header/${locale}`)
+  let header = await dataHeader.json()
 
   //SSR footer
-  let dataHome = await fetch('http://localhost:3000/api/home')
+  let dataFooter = await fetch(`http://localhost:3000/api/footer/${locale}`)
+  let footer = await dataFooter.json()
+
+  //SSR Home
+  let dataHome = await fetch(`http://localhost:3000/api/home/${locale}`)
   let home = await dataHome.json()
 
   //SSR hotels availability
-  let dataHotels = await fetch('http://localhost:3000/api/hotels/availability')
+  let dataHotels = await fetch(`http://localhost:3000/api/hotels/availability/${locale}`)
   let hotels = await dataHotels.json()
 
 
   //SSR slider
-  let dataSlider = await fetch('http://localhost:3000/api/slider')
+  let dataSlider = await fetch(`http://localhost:3000/api/slider/${locale}`)
   let slider = await dataSlider.json()
 
   return {
-    props: { nav, footer, home, hotels, slider }, // passed to the page component as props
+    props: { nav, footer, home, hotels, slider, header }, // passed to the page component as props
   }
 }
 //--------------------------------------------------------------
