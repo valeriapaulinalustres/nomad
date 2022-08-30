@@ -25,53 +25,53 @@ export default function Footer() {
           <p className={styles.footerTextSeo}>{footerItems.text}</p>
           <nav className={styles.footerIconsContainer}>
             {footerItems.youtubesrc &&
- <Link href={footerItems.youtubesrc}>
- {footerItems.youtubeicon &&
-   <Image src={footerItems.youtubeicon}
-     alt={footerItems.youtubealt}
-     width="30px"
-     height="30px"
-     className={styles.icons} />
- }
-</Link>
+              <Link href={footerItems.youtubesrc}>
+                {footerItems.youtubeicon &&
+                  <Image src={footerItems.youtubeicon}
+                    alt={footerItems.youtubealt}
+                    width="30px"
+                    height="30px"
+                    className={styles.icons} />
+                }
+              </Link>
             }
-           {footerItems.facebooksrc &&
+            {footerItems.facebooksrc &&
 
-<Link href={footerItems.facebooksrc}>
-{footerItems.facebookicon &&
-  <Image src={footerItems.facebookicon}
-    alt={footerItems.facebookalt}
-    width="30px"
-    height="30px"
-    className={styles.icons} />
-}
-</Link>
-           }
-           {footerItems.twittersrc &&
-            <Link href={footerItems.twittersrc}>
-              {footerItems.twittericon &&
-                <Image src={footerItems.twittericon}
-                  alt={footerItems.twitteralt}
-                  width="30px"
-                  height="30px"
-                  className={styles.icons} />
-              }
-            </Link>
+              <Link href={footerItems.facebooksrc}>
+                {footerItems.facebookicon &&
+                  <Image src={footerItems.facebookicon}
+                    alt={footerItems.facebookalt}
+                    width="30px"
+                    height="30px"
+                    className={styles.icons} />
+                }
+              </Link>
+            }
+            {footerItems.twittersrc &&
+              <Link href={footerItems.twittersrc}>
+                {footerItems.twittericon &&
+                  <Image src={footerItems.twittericon}
+                    alt={footerItems.twitteralt}
+                    width="30px"
+                    height="30px"
+                    className={styles.icons} />
+                }
+              </Link>
 
-           }
-{footerItems.instagramsrc &&
- <Link href={footerItems.instagramsrc}>
- {footerItems.instagramicon &&
-   <Image src={footerItems.instagramicon}
-     alt={footerItems.instagramalt}
-     width="30px"
-     height="30px"
-     className={styles.icons} />
- }
-</Link>
+            }
+            {footerItems.instagramsrc &&
+              <Link href={footerItems.instagramsrc}>
+                {footerItems.instagramicon &&
+                  <Image src={footerItems.instagramicon}
+                    alt={footerItems.instagramalt}
+                    width="30px"
+                    height="30px"
+                    className={styles.icons} />
+                }
+              </Link>
 
-}
-           
+            }
+
           </nav>
         </div>
 
