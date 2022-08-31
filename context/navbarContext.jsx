@@ -10,7 +10,7 @@ const NavbarProvider = ({ children }) => {
   const [hotelsItems, setHotelsItems] = useState([])
   const [sliderItems, setSliderItems] = useState([])
   const [headerItems, setHeaderItems] = useState([])
-  const [english, setEnglish] = useState("es")
+
 
 
   //-----exports------
@@ -27,9 +27,6 @@ const NavbarProvider = ({ children }) => {
     setSliderItems,
     headerItems,
     setHeaderItems,
-    english,
-    setEnglish,
-
   }
 
   return (

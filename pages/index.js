@@ -3,13 +3,14 @@ import styles from '../styles/Home.module.css'
 import { useContext, useEffect } from 'react'
 import navbarContext from '../context/navbarContext';
 import Slider from '../components/Slider';
-import {useRouter} from 'next/router'
+import {useRouter} from 'next/router';
+
 
 
 export default function Home(props) {
 
   //---------send navbar, footer and home to context and brings homeItems-------------
-  const { setNavbarItems, setFooterItems, homeItems, setHomeItems, setHotelsItems, setSliderItems, setHeaderItems, english } = useContext(navbarContext);
+  const { setNavbarItems, setFooterItems, homeItems, setHomeItems, setHotelsItems, setSliderItems, setHeaderItems } = useContext(navbarContext);
 
   
   const router = useRouter()
@@ -60,6 +61,7 @@ export default function Home(props) {
         </section>
 
       </div>
+
     </Layout>
   )
 }

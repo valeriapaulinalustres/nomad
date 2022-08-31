@@ -7,24 +7,32 @@ import { useContext } from "react";
 export default function MenuList() {
 
 
- //-------------recibes footer from context------------------------
- const { headerItems } = useContext(navbarContext);
- //----------------------------------------------------------------
-console.log(headerItems)
+  //-------------recibes footer from context------------------------
+  const { headerItems } = useContext(navbarContext);
+  //----------------------------------------------------------------
+  console.log(headerItems)
 
   return (
     <div className={styles.menulistContainer}>
       <Link href="" >
-        <h4 className={styles.menulistLinks}>{headerItems.menuCity}</h4>
+        <h4 className={styles.menulistLinks}>
+          {headerItems.menuCity}
+        </h4>
       </Link>
       <Link href="" >
-        <h4 className={styles.menulistLinks}>{headerItems.menuActivities}</h4>
+        <h4 className={styles.menulistLinks}>
+          {headerItems.menuActivities}
+        </h4>
       </Link>
       <Link href="" >
-        <h4 className={styles.menulistLinks}>{headerItems.menuGastronomy}</h4>
+        <h4 className={styles.menulistLinks}>
+          {headerItems.menuGastronomy}
+        </h4>
       </Link>
       <Link href="" >
-        <h4 className={styles.menulistLinks}>{headerItems.menuEvents}</h4>
+        <h4 className={styles.menulistLinks}>
+          {headerItems.menuEvents}
+        </h4>
       </Link>
     </div>
   )

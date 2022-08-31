@@ -10,9 +10,9 @@ export default function Layout({ children, headTitle, headDescription }) {
         <meta name="description" content={headDescription} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>{children}</main>
-
+      <main>
+        {children}
+      </main>
     </div>
   )
 }

@@ -6,7 +6,7 @@ export default function Alojate() {
   return (
     <Layout title="Nomad | Alójate" description="Working around the world" >
       <div className={styles.otherPages}>
-        <h2>Alojate</h2>
+        <h2>Alojate</h2> 
       </div>
     </Layout>
   )

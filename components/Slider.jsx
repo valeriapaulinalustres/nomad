@@ -19,7 +19,13 @@ export default function Slider() {
 
 
                         {/*----Slider images---- */}
-                        <Image src={el.img} width="1000px" height="666.66px" alt={el.title} className={styles.sliderImg}></Image>
+                        <Image
+                            src={el.img}
+                            width="1000px"
+                            height="666.66px"
+                            alt={el.title}
+                            className={styles.sliderImg}
+                        />
 
                         {/*----Slider tags---- */}
                         <div className={styles[`logo${index}`]}>
@@ -29,7 +35,7 @@ export default function Slider() {
                                     width="20px"
                                     height="20px"
                                     className={styles.mapsIcon}
-                                ></Image>
+                                />
                                 <p>{el.city}</p>
                             </div>
 
@@ -44,7 +50,7 @@ export default function Slider() {
                                             width="20px"
                                             height="20px"
                                             alt={el.alt1}
-                                        ></Image>
+                                        />
                                     </div>
                                     <div className={styles.servicesIcons}>
                                         <Image
@@ -52,7 +58,7 @@ export default function Slider() {
                                             width="20px"
                                             height="20px"
                                             alt={el.alt2}
-                                        ></Image>
+                                        />
                                     </div>
                                     <div className={styles.servicesIcons}>
                                         <Image
@@ -60,7 +66,7 @@ export default function Slider() {
                                             width="20px"
                                             height="20px"
                                             alt={el.alt3}
-                                        ></Image>
+                                        />
                                     </div>
                                 </div>
                             }
