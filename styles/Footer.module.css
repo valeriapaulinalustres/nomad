@@ -22,12 +22,11 @@
 }
 
 @keyframes greeting {
-    0%   {background-color: blue;}
-    20%  {background-color: fuchsia;}
-    40%  {background-color: greenyellow;}
-    60% {background-color: green;}
-    80% {background-color: teal;}
-    100% {background-color: blueviolet;}
+    0%   {background-color: var(--green);}
+    25%  {background-color: var(--magenta);}
+    50%  {background-color: var(--aqua);}
+    75% {background-color: var(--blue);}
+    100% {background-color: var(--green);}
   }
 
 .greetingText {
@@ -41,7 +40,7 @@
     justify-content: space-between;
     margin: 50px;
     border-top: 1px solid;
-    border-image: linear-gradient(to right, blue 20%, greenyellow 20%, greenyellow 40%, fuchsia 40%, fuchsia 60%, teal 60%, teal 80%, blue 80%) 5;
+    border-image: linear-gradient(to right, var(--blue) 20%, var(--green) 20%, greenyellow 40%, var(--magenta) 40%, var(--magenta) 60%, var(--aqua) 60%, var(--aqua) 80%, var(--blue) 80%) 5;
     padding-top: 50px;
 }
 

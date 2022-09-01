@@ -3,28 +3,27 @@ import styles from '../styles/Home.module.css'
 import { useContext, useEffect } from 'react'
 import navbarContext from '../context/navbarContext';
 import Slider from '../components/Slider';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import Carousel from '../components/Carousel';
 
 
-
 export default function Home(props) {
-  
+
   //---------send navbar, footer and home to context and brings homeItems-------------
-  const { 
-    setNavbarItems, 
-    setFooterItems, 
-    homeItems, 
-    setHomeItems, 
-    setHotelsItems, 
-    setSliderItems, 
-    setHeaderItems, 
-    setCarouselItems, 
+  const {
+    setNavbarItems,
+    setFooterItems,
+    homeItems,
+    setHomeItems,
+    setHotelsItems,
+    setSliderItems,
+    setHeaderItems,
+    setCarouselItems,
   } = useContext(navbarContext);
 
-  
+
   const router = useRouter()
-  
+
   useEffect(() => {
     setNavbarItems(props.nav)
     setFooterItems(props.footer)
@@ -60,7 +59,7 @@ export default function Home(props) {
 
 //----------SSR-----------------------------------------
 //locale changes language
-export async function getServerSideProps({locale}) {
+export async function getServerSideProps({ locale }) {
 
   //SSR navbar
   let data = await fetch(`http://localhost:3000/api/nav/${locale}`)
@@ -87,9 +86,9 @@ export async function getServerSideProps({locale}) {
   let dataSlider = await fetch(`http://localhost:3000/api/slider/${locale}`)
   let slider = await dataSlider.json()
 
-//SSR carousel
-let dataCarousel = await fetch(`http://localhost:3000/api/carousel/${locale}`)
-let carousel = await dataCarousel.json()
+  //SSR carousel
+  let dataCarousel = await fetch(`http://localhost:3000/api/carousel/${locale}`)
+  let carousel = await dataCarousel.json()
 
 
   return {

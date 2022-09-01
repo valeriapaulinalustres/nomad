@@ -2,7 +2,7 @@ export default function nav(req, res) {
     res.json([
         {
             id: 1,
-            img: "/img/cooking.jpg",
+            img: "/img/tribe.jpg",
             title: "Tu tribu te espera",
             featuresone: "Concepto Co-living",
             featurestwo: "Experiencias únicas",

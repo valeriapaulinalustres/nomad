@@ -55,7 +55,7 @@
     position: absolute;
     z-index: 999;
     top: 35%;
-    left: 1.5rem;
+    left: 1rem;
 }
 
 .arrowNext {
@@ -66,7 +66,7 @@
     position: absolute;
     z-index: 999;
     top: 35%;
-    right: 1.5rem;
+    right: 1rem;
 }
 
 .arrow:hover {
@@ -123,7 +123,7 @@
 .progressDone {
 
     height: 100%;
-    background: linear-gradient(to left, blueviolet, fuchsia);
+    background: linear-gradient(to left, var(--aqua), var(--blue));
     box-shadow: 0 3px 3px -5px rgb(196, 196, 196), 0 2px 5px rgb(100, 100, 100);
     display: flex;
     justify-content: center;

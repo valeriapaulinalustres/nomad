@@ -43,7 +43,7 @@
 }
 
 .headerButton {
-    background-color: blueviolet;
+    background-color: var(--blue);
     border: none;
     padding: 8px 20px;
     border-radius: 10px;
@@ -71,7 +71,7 @@
 }
 
 .headerLanguage:hover{
-color: blueviolet;
+color: var(--magenta);
 }
 
 .menulistContainer {

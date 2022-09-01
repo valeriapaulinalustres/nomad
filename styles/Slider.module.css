@@ -28,7 +28,7 @@
 }
 
 .logo0 {
-    background-color: blue;
+    background-color: var(--blue);
     position: absolute;
     right: -4px;
     bottom: 70px;
@@ -46,7 +46,7 @@
 }
 
 .logo0:hover{
-    background-color: fuchsia;
+    background-color: var(--magenta);
 }
 
 .logo1 {
@@ -73,7 +73,7 @@
 }
 
 .logo2 {
-    background-color: fuchsia;
+    background-color: var(--magenta);
     position: absolute;
     right: -4px;
     bottom: 70px;
@@ -90,7 +90,7 @@
 }
 
 .logo2:hover{
-    background-color: blue;
+    background-color: var(--blue);
 }
 
 .iconTitle {
@@ -102,7 +102,7 @@
 }
 
 .text {
-    border-bottom: 1px solid greenyellow;
+    border-bottom: 1px solid var(--green);
     padding: 15px 0px;
 }
 

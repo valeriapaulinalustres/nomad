@@ -24,3 +24,10 @@ a {
     background: black;
   }
 }
+
+:root{
+  --blue: #3D63A9;
+  --aqua:#17A3AB;
+  --green: #ADC22F;
+  --magenta: #AA2275;
+}
