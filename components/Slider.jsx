@@ -10,13 +10,11 @@ export default function Slider() {
     const { sliderItems } = useContext(navbarContext);
     //----------------------------------------------------------------
 
-
     return (
         <motion.div className={styles.sliderContainer}>
-            <motion.div drag="x" dragConstraints={{ right: 0, left: -890 }} className={styles.slider}>
+            <motion.div drag="x" dragConstraints={{ right: 0, left: -990 }} className={styles.slider}>
                 {sliderItems.map((el, index) => (
                     <motion.div className={styles.sliderImgContainer} key={index}>
-
 
                         {/*----Slider images---- */}
                         <Image

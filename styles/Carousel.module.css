@@ -1,0 +1,133 @@
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.5 ease;
+}
+
+@media screen and (min-width:600px) {
+    .carouselImg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.carouselImg {
+    height: 100%;
+}
+
+.current {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.current .content {
+    opacity: 1;
+}
+
+.contentCarousel {
+    position: absolute;
+    top: 6rem;
+    left: 8rem;
+    color: white;
+    font-size: 50px;
+    font-weight: 1000;
+
+}
+
+.homeTitle {
+    font-size: 74px;
+    width: 440px;
+    font-weight: 800;
+    margin: 40px 0;
+}
+
+
+.arrowPrev {
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    z-index: 999;
+    top: 35%;
+    left: 1.5rem;
+}
+
+.arrowNext {
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    z-index: 999;
+    top: 35%;
+    right: 1.5rem;
+}
+
+.arrow:hover {
+    background-color: white;
+    color: grey;
+}
+
+
+.featuresContainer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 1020;
+    animation: slide-up 1s ease .5s;
+    animation-fill-mode: forwards;
+}
+
+.featuresContent {
+    width: 120px;
+    color: white;
+    transition: transform 2s;
+}
+
+.featuresContent p {
+    font-size: 12px;
+    font-weight: 100px;
+    padding: 5px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.featuresContent:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    transform: scale(1.2);
+}
+
+.featuresContent p:hover {
+    color: white;
+}
+
+
+.progress {
+    height: 15px;
+    width: 200px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1100;
+    top: 600px;
+    left: 40%;
+}
+
+.progressDone {
+
+    height: 100%;
+    background: linear-gradient(to left, blueviolet, fuchsia);
+    box-shadow: 0 3px 3px -5px rgb(196, 196, 196), 0 2px 5px rgb(100, 100, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 0;
+}

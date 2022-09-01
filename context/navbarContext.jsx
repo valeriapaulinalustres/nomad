@@ -4,13 +4,13 @@ const navbarContext = createContext();
 
 const NavbarProvider = ({ children }) => {
 
-  const [navbarItems, setNavbarItems] = useState([])
-  const [footerItems, setFooterItems] = useState([])
-  const [homeItems, setHomeItems] = useState([])
-  const [hotelsItems, setHotelsItems] = useState([])
-  const [sliderItems, setSliderItems] = useState([])
-  const [headerItems, setHeaderItems] = useState([])
-
+  const [navbarItems, setNavbarItems] = useState([]);
+  const [footerItems, setFooterItems] = useState([]);
+  const [homeItems, setHomeItems] = useState([]);
+  const [hotelsItems, setHotelsItems] = useState([]);
+  const [sliderItems, setSliderItems] = useState([]);
+  const [headerItems, setHeaderItems] = useState([]);
+  const [carouselItems, setCarouselItems] = useState([]);
 
 
   //-----exports------
@@ -27,6 +27,8 @@ const NavbarProvider = ({ children }) => {
     setSliderItems,
     headerItems,
     setHeaderItems,
+    carouselItems,
+    setCarouselItems,
   }
 
   return (

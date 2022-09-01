@@ -4,13 +4,23 @@ import { useContext, useEffect } from 'react'
 import navbarContext from '../context/navbarContext';
 import Slider from '../components/Slider';
 import {useRouter} from 'next/router';
+import Carousel from '../components/Carousel';
 
 
 
 export default function Home(props) {
-
+  
   //---------send navbar, footer and home to context and brings homeItems-------------
-  const { setNavbarItems, setFooterItems, homeItems, setHomeItems, setHotelsItems, setSliderItems, setHeaderItems } = useContext(navbarContext);
+  const { 
+    setNavbarItems, 
+    setFooterItems, 
+    homeItems, 
+    setHomeItems, 
+    setHotelsItems, 
+    setSliderItems, 
+    setHeaderItems, 
+    setCarouselItems, 
+  } = useContext(navbarContext);
 
   
   const router = useRouter()
@@ -22,6 +32,7 @@ export default function Home(props) {
     setHotelsItems(props.hotels)
     setSliderItems(props.slider)
     setHeaderItems(props.header)
+    setCarouselItems(props.carousel)
 
   }, [router])
 
@@ -30,25 +41,7 @@ export default function Home(props) {
 
     <Layout title="Nomad" description="Working around the world" >
       <div className={styles.homeContainer}>
-        <section className={styles.homeFirstSection}>
-          <div className={styles.homeFirstSectionContent}>
-            <h1 className={styles.homeTitle}>{homeItems.title}</h1>
-            <div className={styles.featuresContainer}>
-              <div className={styles.featuresContent}>
-                <p>{homeItems.featuresnumberone}</p>
-                <p>{homeItems.featuresone}</p>
-              </div>
-              <div className={styles.featuresContent}>
-                <p>{homeItems.featuresnumbertwo}</p>
-                <p>{homeItems.featurestwo}</p>
-              </div>
-              <div className={styles.featuresContent}>
-                <p>{homeItems.featuresnumberthree}</p>
-                <p>{homeItems.featuresthree}</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Carousel />
 
         <section className={styles.homeSecondSection} >
           <p>{homeItems.text1}<br />{homeItems.text2}<span>{homeItems.text3}</span><br />{homeItems.text4}</p>
@@ -61,7 +54,6 @@ export default function Home(props) {
         </section>
 
       </div>
-
     </Layout>
   )
 }
@@ -95,8 +87,13 @@ export async function getServerSideProps({locale}) {
   let dataSlider = await fetch(`http://localhost:3000/api/slider/${locale}`)
   let slider = await dataSlider.json()
 
+//SSR carousel
+let dataCarousel = await fetch(`http://localhost:3000/api/carousel/${locale}`)
+let carousel = await dataCarousel.json()
+
+
   return {
-    props: { nav, footer, home, hotels, slider, header }, // passed to the page component as props
+    props: { nav, footer, home, hotels, slider, header, carousel }, // passed to the page component as props
   }
 }
 //--------------------------------------------------------------

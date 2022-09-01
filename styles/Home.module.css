@@ -19,13 +19,6 @@
     margin: 50px;
 }
 
-.homeTitle {
-    color: white;
-    font-size: 76px;
-    width: 440px;
-    font-weight: 800;
-    margin-top: 40px;
-}
 
 .homeSecondSection {
     height: 900px;
@@ -58,24 +51,6 @@
     100% {background-color: blue;}
   }
 
-.featuresContainer {
-    display: flex;
-    flex-direction: row;
-}
-
-.featuresContent {
-    width: 100px;
-    padding: 35px;
-    color: white;
-    margin-top: 200px;
-    transition: transform 2s;
-}
-
-.featuresContent:hover{
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    transform: scale(1.2);
-}
 
 .homeThirdSection {
     background-color: rgb(228, 228, 228);
