@@ -53,11 +53,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    cursor: url(/img/smile.png), auto;
+    cursor: url(/img/cursor.png), auto;
 }
 
 .btnSmile {
-    cursor: url(/img/smile.png), auto;
+    cursor: url(/img/cursor.png), auto;
 }
 
 

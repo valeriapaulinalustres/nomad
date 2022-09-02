@@ -35,11 +35,11 @@ function handleLanguage (){
 
   //---reserve button animation---
   const onEnter = ({ currentTarget }) => {
-    gsap.to(currentTarget, { backgroundColor: "#bc0084" });
+    gsap.to(currentTarget, { backgroundColor: "#AA2275" });
   };
 
   const onLeave = ({ currentTarget }) => {
-    gsap.to(currentTarget, { backgroundColor: "#ae15d4" });
+    gsap.to(currentTarget, { backgroundColor: "#17A3AB" });
   };
 
   //---Header & scroll----
@@ -67,7 +67,7 @@ function handleLanguage (){
       {show &&
         <div className={styles.headerContainerFixed} id="top">
           <a href="/" className={styles.headerLogo}>
-            <Image src="/img/logo.png" width="100px" height="18px" alt="logo" />
+            <Image src={headerItems.nomad} width="100px" height="18px" alt="logo" />
           </a>
           <div className={styles.headerContainer}>
             <div className={styles.navContainer}>
@@ -80,7 +80,7 @@ function handleLanguage (){
                 onMouseEnter={onEnter}
                 onMouseLeave={onLeave}>
                 <div className={styles.bagIcon}>
-                  <Image src="/img/bag.png" width="20px" height="20px" alt="bag"></Image>
+                  <Image src={headerItems.bagIcon} width="20px" height="20px" alt="bag"/>
                 </div>
                 <h4 className={styles.btnSmile} >{headerItems.reserve}</h4>
               </button>

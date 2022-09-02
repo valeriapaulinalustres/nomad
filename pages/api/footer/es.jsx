@@ -18,7 +18,7 @@ export default function nav(req, res) {
             facebookalt: "Facebook",
             twitteralt: "Twitter",
             instagramalt: "Instagram",
-            nomad: "/img/logo.png",
+            nomad: "/img/nomadLogo.jpg",
             nomadAlt: "Logo de Nomad",
         },
     )

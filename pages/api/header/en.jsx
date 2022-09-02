@@ -7,6 +7,8 @@ export default function nav(req, res) {
             menuActivities: "Activities",
             menuGastronomy: "Gastronomy",
             menuEvents: "Events",
+            nomad: "/img/nomadLogo.jpg",
+            bagIcon: "/img/calendar.png"
         },
     )
 }

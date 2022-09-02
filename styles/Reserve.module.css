@@ -73,7 +73,7 @@
 }
 
 .inicioButton {
-    background-color: blue;
+    background-color: var(--blue);
     color: white;
     border-radius: 5px;
     padding: 10px;
@@ -82,7 +82,7 @@
 }
 
 .buttonBlur {
-    background-color: blue;
+    background-color: var(--blue);
     color: white;
     border-radius: 5px;
     padding: 10px;
