@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
 import { useContext, useEffect } from 'react'
 import navbarContext from '../context/navbarContext';
@@ -38,7 +38,7 @@ export default function Home(props) {
 
   return (
 
-    <Layout title="Nomad" description="Working around the world" >
+    <Layout headTitle="Nomad" headDescription="Working around the world" >
       <div className={styles.homeContainer}>
         <Carousel />
 
