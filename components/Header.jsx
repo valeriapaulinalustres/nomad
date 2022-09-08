@@ -66,9 +66,12 @@ function handleLanguage (){
     <>
       {show &&
         <div className={styles.headerContainerFixed} id="top">
-          <a href="/" className={styles.headerLogo}>
+          <div className={styles.headerLogo}>
+          <Link href="/" >
             <Image src={headerItems.nomad} width="100px" height="18px" alt="logo" />
-          </a>
+          </Link>
+          </div>
+         
           <div className={styles.headerContainer}>
             <div className={styles.navContainer}>
               <Navbar menu={menu} setMenu={setMenu} />

@@ -17,13 +17,13 @@ export default function Footer() {
 
         <div className={styles.footerDivs}>
           {footerItems.nomad &&
-          <div  className={styles.nomad}>
-<Image src={footerItems.nomad}
-              alt={footerItems.nomadAlt}
-              width="120px"
-              height="20px"
-               />
-          </div>
+            <div className={styles.nomad}>
+              <Image src={footerItems.nomad}
+                alt={footerItems.nomadAlt}
+                width="120px"
+                height="20px"
+              />
+            </div>
           }
           <p className={styles.footerTextSeo}>{footerItems.text}</p>
           <nav className={styles.footerIconsContainer}>
