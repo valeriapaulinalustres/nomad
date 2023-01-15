@@ -96,7 +96,7 @@ export async function getServerSideProps({ locale }) {
   let slider = await dataSlider.json()
 
   //SSR carousel
-  let dataCarousel = await fetch(`http://localhost:3000/api/carousel/${locale}`)
+  let dataCarousel = await fetch(`https://nomad-kappa.vercel.app/api/carousel/${locale}`)
   let carousel = await dataCarousel.json()
 
 
