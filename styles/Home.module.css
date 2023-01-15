@@ -42,6 +42,14 @@
     animation-iteration-count: infinite;
 }
 
+.homeFourthSection{
+    background-color: var(--magenta);
+}
+
+.homeGallerySection{
+    background-color: var(--aqua);
+}
+
 @keyframes text3 {
     0%   {background-color: var(--green);}
     25%  {background-color: var(--magenta);}

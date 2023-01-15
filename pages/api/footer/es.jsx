@@ -1,10 +1,10 @@
 export default function nav(req, res) {
     res.json(
         {
-            text: "Here we should have a few words about what and who the company is. This should serve well for SEO purposes.",
+            text: "Acá breve descripción de la página",
             title: "Contacta con nosotros",
             tel: "T: (054) 1234567",
-            mail: "E: info@nomadperu.com.pe",
+            mail: "E: info@cris.com.ar",
             greeting: "Gracias por scrollear :)",
             youtubesrc: "https://youtube.com/",
             facebooksrc: "https://es-la.facebook.com/",

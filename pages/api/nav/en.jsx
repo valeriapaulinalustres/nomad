@@ -1,7 +1,7 @@
 export default function nav(req, res) { 
     res.json([
-        {id: 1, navName: "Take place", src: "alojate", type:"link"}, 
-        {id: 2, navName: "Co-Work", src: "cowork", type:"link"}, 
-        {id: 3, navName: "Experiment", src:"experimenta", type:"click"}, 
-        {id: 4, navName: "Join", src:"unete", type:"link"}])
+        {id: 1, navName: "About us", src: "alojate", type:"link"}, 
+        {id: 2, navName: "Products", src: "cowork", type:"link"}, 
+        {id: 3, navName: "Contact", src:"experimenta", type:"click"}, 
+        {id: 4, navName: "****", src:"unete", type:"link"}])
     }

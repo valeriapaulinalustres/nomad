@@ -73,12 +73,16 @@
 }
 
 .inicioButton {
-    background-color: var(--blue);
+    background-color: var(--aqua);
     color: white;
     border-radius: 5px;
     padding: 10px;
     border: none;
     margin-top: 10px;
+}
+
+.inicioButton:hover{
+    background-color: var(--green);
 }
 
 .buttonBlur {
@@ -178,4 +182,8 @@
 
 .reserveClose {
     color: gray;
+}
+
+.icon {
+    margin: 0px 5px;
 }

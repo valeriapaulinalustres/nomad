@@ -1,7 +1,7 @@
 export default function nav(req, res) {
     res.json(
         {
-            title: "Your tribe awaits you",
+            title: "Delicacies and decoration",
             text1: "A home with space to cowork, ",
             text2: "connect with ",
             text3: "local adventures",

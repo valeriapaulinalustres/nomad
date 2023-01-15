@@ -2,7 +2,8 @@ import navbarContext from '../context/navbarContext';
 import { useContext } from 'react';
 import { useState } from 'react';
 import styles from '../styles/Reserve.module.css'
-import Image from 'next/image'
+import Image from 'next/image';
+import {BsWhatsapp} from 'react-icons/bs'
 
 export default function Reserve({ setReserve }) {
 
@@ -22,7 +23,7 @@ export default function Reserve({ setReserve }) {
         <div className={styles.overflowReserve}>
             <div className={styles.reserveContainer}>
                 <div className={styles.reserveTitle}>
-                    <h2>Reservar</h2>
+                    <h2>Consultar catálogo</h2>
                     <p onClick={() => setReserve(false)} className={styles.reserveClose}>x</p>
                 </div>
 
@@ -84,6 +85,7 @@ export default function Reserve({ setReserve }) {
                                                 ? styles.inicioButton
                                                 : styles.buttonBlur}
                                         >
+                                             <BsWhatsapp className={styles.icon}/>
                                             {element.btn}
                                         </button>
                                     </div>

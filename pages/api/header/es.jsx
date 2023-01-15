@@ -2,7 +2,7 @@ export default function nav(req, res) {
     res.json(
         {
             language: "English",
-            reserve: "Reservar",
+            reserve: "Comprar",
             menuCity: "City host",
             menuActivities: "Actividades",
             menuGastronomy: "Gastronomía",

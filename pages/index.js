@@ -38,19 +38,28 @@ export default function Home(props) {
 
   return (
 
-    <Layout headTitle="Nomad" headDescription="Working around the world" >
+    <Layout headTitle="Nomad" headDescription="Working around the world" id="home">
       <div className={styles.homeContainer}>
         <Carousel />
-
-        <section className={styles.homeSecondSection} >
+{/* Description section */}
+        <section className={styles.homeSecondSection} id="about">
           <p>{homeItems.text1}<br />{homeItems.text2}<span>{homeItems.text3}</span><br />{homeItems.text4}</p>
         </section>
-
-        <section className={styles.homeThirdSection}>
+{/* Old Carousel section */}
+        {/* <section className={styles.homeThirdSection}>
           <h2 className={styles.sliderTitle}>{homeItems.slidertitle}</h2>
           <p className={styles.sliderText}>{homeItems.slidertext}</p>
           <Slider />
-        </section>
+        </section> */}
+{/* Gallery section */}
+<section className={styles.homeGallerySection} id="gallery">
+  <p>Galería de fotos</p>
+</section>
+{/* Contact section */}
+<section className={styles.homeFourthSection} id="contact">
+<p>contacto</p>
+</section>
+
 
       </div>
     </Layout>
@@ -62,7 +71,7 @@ export default function Home(props) {
 export async function getServerSideProps({ locale }) {
 
   //SSR navbar
-  let data = await fetch(`http:/nomad-kappa.vercel.app/api/nav/${locale}`)
+  let data = await fetch(`https://nomad-kappa.vercel.app/api/nav/${locale}`)
   let nav = await data.json()
 
   //SSR header
@@ -87,7 +96,7 @@ export async function getServerSideProps({ locale }) {
   let slider = await dataSlider.json()
 
   //SSR carousel
-  let dataCarousel = await fetch(`https://nomad-kappa.vercel.app/api/carousel/${locale}`)
+  let dataCarousel = await fetch(`http://localhost:3000/api/carousel/${locale}`)
   let carousel = await dataCarousel.json()
 
 
@@ -96,3 +105,8 @@ export async function getServerSideProps({ locale }) {
   }
 }
 //--------------------------------------------------------------
+
+/*
+para deploy https://nomad-kappa.vercel.app/
+para localhost http://localhost:3000/
+*/
