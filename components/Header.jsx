@@ -7,7 +7,7 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import Link from 'next/link';
 import navbarContext from '../context/navbarContext';
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 
 function Header() {
@@ -16,22 +16,22 @@ function Header() {
   const [reserve, setReserve] = useState(false)
   const [show, setShow] = useState(true)
 
- //-------------recibes footer from context------------------------
- const { headerItems } = useContext(navbarContext);
- //----------------------------------------------------------------
+  //-------------recibes footer from context------------------------
+  const { headerItems } = useContext(navbarContext);
+  //----------------------------------------------------------------
 
 
-//---change Language------------
+  //---change Language------------
 
-const router = useRouter()
+  const router = useRouter()
 
 
-function handleLanguage (){
-  const language = router.locale == "es" ?  "en" : "es" 
-  router.push(router.pathname, router.pathname, {
-    locale: language
-  })
-}
+  function handleLanguage() {
+    const language = router.locale == "es" ? "en" : "es"
+    router.push(router.pathname, router.pathname, {
+      locale: language
+    })
+  }
 
   //---reserve button animation---
   const onEnter = ({ currentTarget }) => {
@@ -67,34 +67,34 @@ function handleLanguage (){
       {show &&
         <div className={styles.headerContainerFixed} id="top">
           <div className={styles.headerLogo}>
-          <Link href="/" >
-            <Image src={headerItems.nomad} width="100px" height="18px" alt="logo" />
-          </Link>
+            <Link href="/" >
+              <Image src={headerItems.nomad} width="100px" height="18px" alt="logo" />
+            </Link>
           </div>
-         
+
           <div className={styles.headerContainer}>
             <div className={styles.navContainer}>
               <Navbar menu={menu} setMenu={setMenu} />
               <h3 className={styles.headerLanguage} onClick={handleLanguage}>{headerItems.language}</h3>
               <Link href="#top">
-              <button
-                onClick={() => setReserve(!reserve)}
-                className={styles.headerButton}
-                onMouseEnter={onEnter}
-                onMouseLeave={onLeave}>
-                <div className={styles.bagIcon}>
-                  <Image src={headerItems.bagIcon} width="20px" height="20px" alt="bag"/>
-                </div>
-                <h4 className={styles.btnSmile} >{headerItems.reserve}</h4>
-              </button>
-              </Link>            
+                <button
+                  onClick={() => setReserve(!reserve)}
+                  className={styles.headerButton}
+                  onMouseEnter={onEnter}
+                  onMouseLeave={onLeave}>
+                  <div className={styles.bagIcon}>
+                    <Image src={headerItems.bagIcon} width="20px" height="20px" alt="bag" />
+                  </div>
+                  <h4 className={styles.btnSmile} >{headerItems.reserve}</h4>
+                </button>
+              </Link>
             </div>
             {menu && <MenuList />}
             {reserve && <Reserve setReserve={setReserve} />}
           </div>
         </div>
       }
-      
+
     </>
   )
 }

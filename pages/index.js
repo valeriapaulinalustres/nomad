@@ -62,32 +62,32 @@ export default function Home(props) {
 export async function getServerSideProps({ locale }) {
 
   //SSR navbar
-  let data = await fetch(`http://localhost:3000/api/nav/${locale}`)
+  let data = await fetch(`http:/nomad-kappa.vercel.app/api/nav/${locale}`)
   let nav = await data.json()
 
   //SSR header
-  let dataHeader = await fetch(`http://localhost:3000/api/header/${locale}`)
+  let dataHeader = await fetch(`https://nomad-kappa.vercel.app/api/header/${locale}`)
   let header = await dataHeader.json()
 
   //SSR footer
-  let dataFooter = await fetch(`http://localhost:3000/api/footer/${locale}`)
+  let dataFooter = await fetch(`https://nomad-kappa.vercel.app/api/footer/${locale}`)
   let footer = await dataFooter.json()
 
   //SSR Home
-  let dataHome = await fetch(`http://localhost:3000/api/home/${locale}`)
+  let dataHome = await fetch(`https://nomad-kappa.vercel.app/api/home/${locale}`)
   let home = await dataHome.json()
 
   //SSR hotels availability
-  let dataHotels = await fetch(`http://localhost:3000/api/hotels/availability/${locale}`)
+  let dataHotels = await fetch(`https://nomad-kappa.vercel.app/api/hotels/availability/${locale}`)
   let hotels = await dataHotels.json()
 
 
   //SSR slider
-  let dataSlider = await fetch(`http://localhost:3000/api/slider/${locale}`)
+  let dataSlider = await fetch(`https://nomad-kappa.vercel.app/api/slider/${locale}`)
   let slider = await dataSlider.json()
 
   //SSR carousel
-  let dataCarousel = await fetch(`http://localhost:3000/api/carousel/${locale}`)
+  let dataCarousel = await fetch(`https://nomad-kappa.vercel.app/api/carousel/${locale}`)
   let carousel = await dataCarousel.json()
 
 
