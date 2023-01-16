@@ -1,3 +1,7 @@
+.headerMobile{
+    display: none;
+}
+
 .headerContainerFixed{
     position: fixed;
     display: flex;
@@ -68,6 +72,7 @@
     font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
+    border-left: 1px solid black;
 }
 
 .headerLanguage:hover{
@@ -99,3 +104,51 @@ color: var(--magenta);
     margin: 0px 10px 0px 0px;
 }
 
+
+@media only screen and (max-width:500px) {
+
+    .headerDesktop{
+        display: none;
+    }
+
+    .headerContainerFixed{
+        align-items: flex-start;
+        z-index: 9;
+        width: 100vw;
+        top: 10px;
+        margin: 0px 10px ;
+    }
+
+    .headerContainerLogoAndNav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+
+.navContainer {
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.menuIcon{
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: var(--aqua);
+    border-radius: 10px;
+}
+
+.headerMobile{
+    display: block;
+}
+
+.headerLanguage {
+   border-top: 1px solid black ;
+   border-left: none;
+  padding-left: 0px;
+  padding-top: 10px;
+}
+
+}

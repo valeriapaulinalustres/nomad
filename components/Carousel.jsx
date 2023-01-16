@@ -80,7 +80,7 @@ function Carousel() {
 
   return (
     <>
-      <div>
+      <div id="home">
         <div className={styles.arrowPrev} onClick={prevSlide}>{"<"}</div>
         <div className={styles.arrowNext} onClick={nextSlide}>{">"}</div>
         {carouselItems.map((el, index) => {

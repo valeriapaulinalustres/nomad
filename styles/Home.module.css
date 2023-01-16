@@ -77,3 +77,13 @@
     padding: 5px 15px 0px 75px;
     font-size: 12px;
 }
+
+@media only screen and (max-width:500px) {
+.homeSecondSection p {
+    font-size: 30px;
+}
+
+.homeSecondSection p span {
+    font-weight: 400;
+}
+}

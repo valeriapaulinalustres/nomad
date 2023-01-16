@@ -30,4 +30,8 @@
     text-align: center;
 }
 
-
+@media only screen and (max-width:500px) {
+    .navbarContainer {
+        flex-direction: column;
+    }
+}

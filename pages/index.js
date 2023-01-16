@@ -38,7 +38,8 @@ export default function Home(props) {
 
   return (
 
-    <Layout headTitle="Nomad" headDescription="Working around the world" id="home">
+    <Layout headTitle="Nomad" headDescription="Working around the world" >
+
       <div className={styles.homeContainer}>
         <Carousel />
 {/* Description section */}
