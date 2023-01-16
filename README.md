@@ -11,3 +11,5 @@ This website is being developed for a client. I hope you enjoy it.
 -GSAP
 
 ## Deploy on Vercel
+
+https://nomad-kappa.vercel.app/
