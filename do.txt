@@ -1,2 +1,8 @@
 -pedir marca 
 -categorías según el precio (tazas, cajas, bombones)
+
+-arreglar íconos del footer, rutas a la carpeta public
+-letra más chica segunda sección y margen
+-cambiar ícono del botón comprar
+-cambiar de lugar flechas de las fotos
+-por qué se ve el fondo negro?
